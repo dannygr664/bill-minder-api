@@ -5,17 +5,19 @@ import { UsersModule } from './users/users.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
+import { BillsModule } from './bills/bills.module';
 
 @Module({
   imports: [
     UsersModule,
     MongooseModule.forRoot(
-      process.env.MONGODB_URI || 'mongodb://localhost/your_db_name',
+      process.env.MONGODB_URI || 'mongodb://localhost/bills',
     ),
     AuthModule,
     ConfigModule.forRoot({
       isGlobal: true,
     }),
+    BillsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

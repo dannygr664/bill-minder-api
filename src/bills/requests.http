@@ -1,0 +1,13 @@
+### Create Bill
+POST http://localhost:8080/bills/create
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwidXNlcklkIjoiNjVkNTkxNjZiZDdlZjZkNDk4YWRkMTIzIiwiaWF0IjoxNzA4NDk1MzE3LCJleHAiOjE3MDg0OTUzNzd9.iPOdsQFBfjdFDchtBqiEdSGFGCtFtk7MOqwXUHMeK5Q
+
+{
+  "name": "Rent",
+  "amount": 1000,
+  "dueDate": "2020-09-01",
+  "isPaid": false,
+  "isRecurring": true,
+  "category": "Housing"
+}
