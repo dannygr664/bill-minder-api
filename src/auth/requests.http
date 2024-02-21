@@ -3,6 +3,6 @@ POST http://localhost:8080/auth/login
 content-type: application/json
 
 {
-    "username": "testUser3",
+    "username": "testUser",
     "password": "password"
 }
